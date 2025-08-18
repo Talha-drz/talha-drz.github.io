@@ -1,44 +1,124 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talha Durmaz - Talha_Drz</title>
-    <link rel="stylesheet" href="style.css"> 
-   <base target="_blank">
-    <link rel="icon" type="image/jpg" href="Talha.jpg">
-    <script src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talha Duran - Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+
+</style>
 </head>
 <body>
+<div class="container">
+  <!-- Left Sidebar -->
+  <aside class="sidebar left-sidebar">
+    <div class="profile">
+      <img src="https://media.licdn.com/dms/image/v2/D4D35AQFW1GK6uiqqzw/profile-framedphoto-shrink_400_400/B4DZcnyhnRGcAc-/0/1748719246140?e=1755777600&v=beta&t=qaGZnSoAlWIZme2Goxf4xFLPRlDW5k_ahZ-JTD78eTQ" alt="Talha Duran" class="profile-img">
+      <h1 class="profile-name">Talha Durmaz</h1>
+<p class="profile-title">Yazılım Geliştirici</p>
+      
+    <div class="social-links">
+  <a href="https://github.com/talhadrz" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://linkedin.com/in/talha-drz" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://www.instagram.com/talha_drz/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="mailto:talhadurmaz175@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+</div>
 
-    <header>
-        <h1>Kişisel Web Siteme Hoş Geldiniz</h1>
-    </header>
+    </div>
+    
+    <div class="sidebar-section">
+      <h2 class="section-title"><i class="fas fa-user"></i> Hakkımda</h2>
+      <div class="info-item">
+        <p class="info-text">
+            Merhaba, ben Talha! Modern yazılım teknolojileri ile masaüstü ve web uygulamalar geliştiriyorum. 
+Kullanıcı deneyimi, verimli kod yazımı ve sürekli öğrenme konusunda tutkuluyum.
 
-    <section class="content">
-        <div class="card">
-            <h2>Hakkımda</h2>
-            <p>Yazılım geliştiriciyim, C#, SQL, Unity, mobil ve masaüstü uygulamalar üzerine çalışıyorum. Git, Docker, Visual Studio, VS Code kullanıyorum.</p>
+        </p>
+      </div>
+    </div>
+    
+    <div class="sidebar-section">
+      <h2 class="section-title"><i class="fas fa-info-circle"></i> Bilgiler</h2>
+      <div class="info-item">
+        <div class="info-label"><i class="fas fa-birthday-cake"></i> Yaş</div>
+        <div class="info-text">20</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label"><i class="fas fa-map-marker-alt"></i> Lokasyon</div>
+        <div class="info-text">Konya, Türkiye</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label"><i class="fas fa-envelope"></i> Email</div>
+        <div class="info-text">talhadurmaz175@gmail.com</div>
+      </div>
+    </div>
+    
+    <div class="sidebar-section">
+     <h2 class="section-title"><i class="fas fa-heart"></i> Hobiler</h2>
+<div class="skills">
+  <span class="skill"><i class="fas fa-book"></i> Okuma</span>
+  <span class="skill"><i class="fas fa-music"></i> Müzik</span>
+  <span class="skill"><i class="fas fa-plane"></i> Seyahat</span>
+  <span class="skill"><i class="fas fa-utensils"></i> Yemek</span>
+  <span class="skill"><i class="fas fa-laptop-code"></i> Kodlama</span>
+  <span class="skill"><i class="fas fa-robot"></i> Yapay Zeka</span>
+  <span class="skill"><i class="fas fa-microchip"></i> Donanım Projeleri</span>
+</div>
 
-            <h3>Sosyal Medya</h3>
-            <ul>
-                <li><a href="https://github.com/talhadrz">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/talha-durmaz">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/talha_drz/">Instagram</a></li>
-                <li><a href="https://www.udemy.com/user/talhadurmaz/">Udemiy</a></li>
-                <li><a href="https://www.youtube.com/@Talha_drz">Youtube</a></li>  
-                <li><a href="https://www.tiktok.com/@talha_drz">Tiktok</a></li>
-            </ul>
+    </div>
+  </aside>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <h1 class="page-title">Projelerim</h1>
+    
+    <div class="projects-container" id="projects">
+      <!-- Projects will be loaded here -->
+    </div>
+  </main>
+  
+  <!-- Right Sidebar -->
+  <aside class="sidebar right-sidebar">
+    <div class="sidebar-section">
+<h2 class="section-title"><i class="fas fa-code"></i> Yetenekler</h2>
+<div class="skills">
+  <span class="skill">C#</span>
+  <span class="skill">.NET</span>
+  <span class="skill">ASP.NET MVC</span>
+  <span class="skill">SQL</span>
+  <span class="skill">REST API</span>
+  <span class="skill">Git</span>
+  <span class="skill">Docker</span>
+  <span class="skill">HTML</span>
+  <span class="skill">CSS</span>
+</div>
 
-            <a href="/projeler/" target="_self" class="button">Projelerimi Gör</a>
 
-        </div>
-    </section>
+    </div>
+    
+  <div class="sidebar-section">
+  <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Eğitim</h2>
+  <div class="info-item">
+    <div class="info-label">Lise Mezunu</div>
+    <div class="info-text">Konya / Türkiye</div>
+  </div>
+</div>
 
-    <footer>
-        <p>© 2025 Talha Durmaz. Tüm hakları saklıdır.</p>
-    </footer>
+    
+ 
+    
+    <div class="sidebar-section">
+      <h2 class="section-title"><i class="fas fa-language"></i> Diller</h2>
+      <div class="info-item">
+        <div class="info-label">Türkçe</div>
+        <div class="info-text">Ana Dil</div>
+      </div>
+  
+    </div>
+  </aside>
+</div>
+
 
 </body>
-
 </html>
