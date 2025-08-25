@@ -1,25 +1,369 @@
-t<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talha Duran - Portfolio</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="stil.css" />
-  <script src="script.js"></script>
+<link rel="icon" type="image/png" href="resim.jpg">
+
+<style>
+  :root {
+    --primary: #2563eb;
+    --secondary: #1e40af;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --gray: #94a3b8;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f2f5, #e5e9f2);
+    color: var(--dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Layout */
+  .container {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    min-height: 100vh;
+  }
+  
+  /* Sidebars */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+  
+  .left-sidebar {
+    left: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .right-sidebar {
+    right: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Main Content */
+  .main-content {
+    grid-column: 2;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  /* Profile Section */
+  .profile {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border: 4px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--dark);
+  }
+  
+  .profile-title {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  /* Sidebar Sections */
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(37, 99, 235, 0.2);
+    display: flex;
+    align-items: center;
+  }
+  
+  .section-title i {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .info-item {
+    margin-bottom: 15px;
+  }
+  
+  .info-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 3px;
+  }
+  
+  .info-text {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+  
+  /* Social Icons */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-link:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  /* Skills */
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .skill {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .skill:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Projects */
+  .page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 30px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  .projects-container {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .project-title i {
+    margin-right: 10px;
+    color: var(--primary);
+  }
+  
+  .project-image {
+    width: 100%;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .project-desc {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    max-height: 120px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .project-desc.expanded {
+    max-height: none;
+  }
+  
+  .project-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .project-btn i {
+    margin-left: 5px;
+  }
+  
+  .project-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+      position: static;
+      width: 100%;
+      backdrop-filter: none;
+    }
+    
+    .left-sidebar {
+      order: 1;
+      border-right: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .main-content {
+      order: 2;
+      grid-column: 1;
+    }
+    
+    .right-sidebar {
+      order: 3;
+      border-left: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 20px;
+    }
+    
+    .page-title {
+      font-size: 28px;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .project-card {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .project-card:nth-child(1) { animation-delay: 0.1s; }
+  .project-card:nth-child(2) { animation-delay: 0.2s; }
+  .project-card:nth-child(3) { animation-delay: 0.3s; }
+  .project-card:nth-child(4) { animation-delay: 0.4s; }
+  .project-card:nth-child(5) { animation-delay: 0.5s; }
+</style>
 </head>
 <body>
 <div class="container">
   <!-- Left Sidebar -->
   <aside class="sidebar left-sidebar">
     <div class="profile">
-      <img src="https://media.licdn.com/dms/image/v2/D4D35AQFW1GK6uiqqzw/profile-framedphoto-shrink_400_400/B4DZcnyhnRGcAc-/0/1748719246140?e=1755777600&v=beta&t=qaGZnSoAlWIZme2Goxf4xFLPRlDW5k_ahZ-JTD78eTQ" alt="Talha Duran" class="profile-img">
+      <img src="https://media.licdn.com/dms/image/v2/D4D35AQFW1GK6uiqqzw/profile-framedphoto-shrink_400_400/B4DZcnyhnRGcAc-/0/1748719246140?e=1756724400&v=beta&t=Ke6F5nZXc240Vjys4KnIdAZAxnGOTPq55ytXw2Gss8A" alt="Talha Duran" class="profile-img">
       <h1 class="profile-name">Talha Durmaz</h1>
 <p class="profile-title">Yazılım Geliştirici</p>
       
     <div class="social-links">
   <a href="https://github.com/talhadrz" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-  <a href="https://linkedin.com/in/talha-drz" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://linkedin.com/in/talhadrz" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
   <a href="https://www.instagram.com/talha_drz/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
   <a href="mailto:talhadurmaz175@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
 </div>
@@ -103,6 +447,10 @@ Kullanıcı deneyimi, verimli kod yazımı ve sürekli öğrenme konusunda tutku
     <div class="info-text">Konya / Türkiye</div>
   </div>
 </div>
+
+    
+ 
+    
     <div class="sidebar-section">
       <h2 class="section-title"><i class="fas fa-language"></i> Diller</h2>
       <div class="info-item">
@@ -114,6 +462,102 @@ Kullanıcı deneyimi, verimli kod yazımı ve sürekli öğrenme konusunda tutku
   </aside>
 </div>
 
+<script>
+const GITHUB_USER = "talha-drz";
+// Eksik token, sonuna 'a' ekle
+let GITHUB_TOKEN = "ghp_h56VznMhN4MzJdMETsXJtxQ1ZcR5wn4IMUk";
+GITHUB_TOKEN += "f";
 
+// Görünmesini istemediğiniz repoların isimlerini buraya ekleyin
+const EXCLUDED_REPOS = ["talha-drz.github.io", "talha-drz", "hakkimda",""];
+
+async function getAllRepos() {
+    let repos = [];
+    let page = 1;
+    while (true) {
+        const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&page=${page}`, {
+            headers: { Authorization: `token ${GITHUB_TOKEN}` }
+        });
+        if (!res.ok) break;
+        const data = await res.json();
+        if (data.length === 0) break;
+        repos = repos.concat(data);
+        page++;
+    }
+    return repos;
+}
+
+async function getReadme(repo) {
+    const branchesToTry = [repo.default_branch, "main", "master"];
+    for (let branch of branchesToTry) {
+        try {
+            const url = `https://raw.githubusercontent.com/${GITHUB_USER}/${repo.name}/${branch}/README.md`;
+            const res = await fetch(url);
+            if (res.ok) {
+                const text = await res.text();
+                const imgMatch = text.match(/!\[.*?\]\((.*?)\)/);
+                const imageUrl = imgMatch ? imgMatch[1] : null;
+                const shortText = text.length > 150 ? text.slice(0, 150) + "..." : text;
+                return { full: text, short: shortText, image: imageUrl };
+            }
+        } catch(e) { continue; }
+    }
+    return { full: "README bulunamadı.", short: "README bulunamadı.", image: null };
+}
+
+async function loadProjects() {
+    const repos = await getAllRepos();
+    const container = document.getElementById("projects");
+
+    for (let repo of repos) {
+        // Eğer repo ismi EXCLUDED_REPOS listesindeyse, bu repo'yu atla
+        if (EXCLUDED_REPOS.includes(repo.name)) {
+            continue;
+        }
+
+        const { full, short, image } = await getReadme(repo);
+        const div = document.createElement("div");
+        div.className = "project-card";
+        div.innerHTML = `
+            <h3 class="project-title"><i class="fas fa-code-branch"></i> ${repo.name}</h3>
+            ${image ? `<img src="${image}" alt="${repo.name}" class="project-image">` : ""}
+            <p class="project-desc">${short}</p>
+            <div class="project-buttons">
+                <button class="project-btn">
+                    <i class="fas fa-book-reader"></i> Devamını Oku
+                </button>
+                <button class="github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </button>
+            </div>
+        `;
+        container.appendChild(div);
+
+        const descDiv = div.querySelector(".project-desc");
+        const readBtn = div.querySelector(".project-btn");
+        const githubBtn = div.querySelector(".github-btn");
+
+        // README genişletme/kısaltma işlevi
+        readBtn.addEventListener("click", () => {
+            if (readBtn.innerHTML.includes("book-reader")) {
+                descDiv.textContent = full;
+                descDiv.classList.add("expanded");
+                readBtn.innerHTML = '<i class="fas fa-book"></i> Kısalt';
+            } else {
+                descDiv.textContent = short;
+                descDiv.classList.remove("expanded");
+                readBtn.innerHTML = '<i class="fas fa-book-reader"></i> Devamını Oku';
+            }
+        });
+
+        // GitHub yönlendirme butonu
+        githubBtn.addEventListener("click", () => {
+            window.open(repo.html_url, "_blank");
+        });
+    }
+}
+
+loadProjects();
+</script>
 </body>
 </html>
