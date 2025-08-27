@@ -1,8 +1,8 @@
+<img width="1919" height="1079" alt="Ekran görüntüsü 2025-08-27 192722" src="https://github.com/user-attachments/assets/d001429f-1674-4f55-af27-e53d25c598bd" />
 
 
 # Talha Durmaz - Yazılım Geliştirici
 
-<img width="1919" height="1079" alt="Ekran görüntüsü 2025-08-27 192722" src="https://github.com/user-attachments/assets/d001429f-1674-4f55-af27-e53d25c598bd" />
 
 Merhaba! Ben **Talha Durmaz**, masaüstü ve web uygulamaları geliştiriyorum. Kullanıcı deneyimi ve verimli kod yazımına odaklanıyorum. 2020’den bu yana **C#** ve **SQL** ile projeler ürettim ve yenilikçi çözümler geliştirmeyi hedefliyorum.  
 
