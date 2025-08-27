@@ -1,34 +1,66 @@
-Talha Duran Portfolio - Kod Analizi
-📋 Genel Bakış
-Bu kod, Talha Duran'ın kişisel portfolyo web sitesini oluşturan tek sayfalık bir HTML belgesidir. Modern ve responsive bir tasarıma sahiptir.
 
-🏗️ Yapısal Özellikler
-Üç sütunlu düzen: Sol sidebar - Ana içerik - Sağ sidebar
 
-Responsive tasarım: Mobil cihazlara uyumlu
+# Talha Durmaz - Yazılım Geliştirici
 
-CSS Grid ve Flexbox kullanılarak oluşturulmuş
+<img width="1919" height="1079" alt="Ekran görüntüsü 2025-08-27 192722" src="https://github.com/user-attachments/assets/d001429f-1674-4f55-af27-e53d25c598bd" />
 
-🎨 Tasarım
-Renk şeması: Mavi tonları ve gri skalası
+Merhaba! Ben **Talha Durmaz**, masaüstü ve web uygulamaları geliştiriyorum. Kullanıcı deneyimi ve verimli kod yazımına odaklanıyorum. 2020’den bu yana **C#** ve **SQL** ile projeler ürettim ve yenilikçi çözümler geliştirmeyi hedefliyorum.  
 
-Animasyonlar: Hover efektleri, fade-in animasyonları
+Bu profil, **yapay zeka destekli bir sistemle** otomatik olarak GitHub projelerimi çekmekte ve README'de güncellenmektedir.
 
-Görsel öğeler: Yuvarlak profil fotoğrafı, ikonlar, gölgeler
+---
 
-⚙️ Teknik Özellikler
-GitHub Entegrasyonu: API ile projeleri dinamik yükleme
+## 👤 Hakkımda
+Masaüstü ve web uygulamaları geliştiriyorum, kullanıcı deneyimi ve verimli kod yazımına odaklanıyorum. **Yapay zeka destekli sistemle**, projelerim GitHub üzerinde otomatik olarak güncelleniyor ve burada listeleniyor.  
 
-Dinamik içerik: Repo bilgilerini ve anlat.txt dosyalarını okuma
+---
 
-İşlevsellik: Proje açıklamalarını genişletme/daraltma
+## 📍 Bilgiler
+- **Yaş:** 20  
+- **Lokasyon:** Konya, Türkiye  
+- **Email:** talhadurmaz175@gmail.com  
 
-📱 Responsive Davranış
-1200px altı: Tek sütunlu düzene geçiş
+---
 
-Mobil uyumluluk: Dokunmatik optimizasyon
+## ❤️ Hobiler
+- Okuma  
+- Müzik  
+- Seyahat  
+- Yemek  
+- Kodlama  
+- Yapay Zeka  
+- Donanım Projeleri  
 
-🔒 Güvenlik
-GitHub token kısmen gizlenmiş
+---
 
-Belirli repolar hariç tutulabilir (EXCLUDED_REPOS)
+## 💻 Yetenekler
+- C#  
+- .NET  
+- ASP.NET MVC  
+- SQL  
+- REST API  
+- Git  
+- Docker  
+- HTML / CSS  
+
+---
+
+## 🎓 Eğitim
+- Lise Mezunu, Konya / Türkiye  
+
+---
+
+## 🌍 Diller
+- Türkçe (Ana Dil)  
+
+---
+
+## 📂 Projelerim
+Projelerim, **yapay zeka destekli sistemle** otomatik olarak GitHub üzerinden çekilmekte ve bu README’de listelenmektedir. Her proje için kısa açıklama, görsel (varsa) ve GitHub bağlantısı sunulmaktadır.
+
+> Not: Projeler README'de otomatik olarak güncellenir.
+
+---
+
+## ⚡ Notlar
+Bu GitHub profili, **otomatik güncellenen projeler** ve **yapay zeka desteğiyle** yönetilmektedir. Yeni bir proje eklediğinizde veya var olan projeyi güncellediğinizde sistem otomatik olarak README'yi günceller.  
