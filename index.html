@@ -490,7 +490,7 @@ async function getReadme(repo) {
     const branchesToTry = [repo.default_branch, "main", "master"];
     for (let branch of branchesToTry) {
         try {
-            const url = `https://raw.githubusercontent.com/${GITHUB_USER}/${repo.name}/${branch}/README.md`;
+            const url = `https://raw.githubusercontent.com/${GITHUB_USER}/${repo.name}/${branch}/anlat.txt`;
             const res = await fetch(url);
             if (res.ok) {
                 const text = await res.text();
