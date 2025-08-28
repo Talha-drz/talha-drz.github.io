@@ -468,7 +468,7 @@ let GITHUB_TOKEN = "ghp_h56VznMhN4MzJdMETsXJtxQ1ZcR5wn4IMUk";
 GITHUB_TOKEN += "f";
 
 // Görünmesini istemediğiniz repoların isimlerini buraya ekleyin
-const EXCLUDED_REPOS = ["talha-drz.github.io", "talha-drz", "hakkimda",""];
+const EXCLUDED_REPOS = ["talha-drz.github.io", "talha-drz", ""];
 
 async function getAllRepos() {
     let repos = [];
@@ -490,7 +490,7 @@ async function getReadme(repo) {
     const branchesToTry = [repo.default_branch, "main", "master"];
     for (let branch of branchesToTry) {
         try {
-            const url = `https://raw.githubusercontent.com/${GITHUB_USER}/${repo.name}/${branch}/anlat.txt`;
+            const url = `https://raw.githubusercontent.com/${GITHUB_USER}/${repo.name}/${branch}/README.md`;
             const res = await fetch(url);
             if (res.ok) {
                 const text = await res.text();
