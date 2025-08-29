@@ -8,6 +8,26 @@
 <link rel="icon" type="image/png" href="resim.jpg">
 
 <style>
+  /* Projects */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ✅ Kartları otomatik yan yana dizer */
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 350px;   /* ✅ Kart enini sınırladık */
+  width: 100%;        /* ✅ Container içinde %100 genişleyecek */
+  overflow: hidden;   /* ✅ Taşma engeli */
+  margin: 0 auto;     /* ✅ Kartı ortalar */
+}
+
   :root {
     --primary: #2563eb;
     --secondary: #1e40af;
